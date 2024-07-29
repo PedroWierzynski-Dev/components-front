@@ -1,0 +1,107 @@
+@import '../base/borders';
+@import '../base/variables';
+@import '../colors/default';
+
+@mixin no-underline {
+  text-decoration: none;
+}
+
+.custom-link {
+  display: flex;
+  align-items: center;
+  color: var(--svg-stroke-color);
+  @include no-underline;
+
+  &:hover {
+    background-color: $swatches-base-hover !important;
+  }
+
+  &:active {
+    background-color: $swatches-base-active !important;
+  }
+
+  &:focus-visible {
+    background-color: $swatches-base-default !important;
+    border-color: $swatches-border-base-focus !important;
+    border-width: $button-focus-visible-border-width;
+  }
+
+  &::selection {
+    background-color: $swatches-base-selected !important;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    color: $swatches-on-base !important;
+    cursor: not-allowed;
+    text-decoration: none;
+  }
+
+  &.primary-default {
+    color: $primary;
+  }
+
+  &.secondary-default {
+    color: $secondary;
+  }
+
+  &.tertiary-default {
+    color: $tertiary;
+  }
+
+  &.success-default {
+    color: $success-default;
+  }
+
+  &.warning-default {
+    color: $warning-default;
+  }
+
+  &.destructive-default {
+    color: $destructive-default;
+  }
+
+  &.red-default {
+    color: $red-default;
+  }
+
+  &.yellow-default {
+    color: $yellow-default;
+  }
+
+  &.green-default {
+    color: $green-default;
+  }
+
+  &.blue-default {
+    color: $blue-default;
+  }
+
+  &.purple-default {
+    color: $purple-default;
+  }
+
+  &.red-transparency {
+    color: $red-transparency;
+  }
+
+  &.yellow-transparency {
+    color: $yellow-transparency;
+  }
+
+  &.green-transparency {
+    color: $green-transparency;
+  }
+
+  &.blue-transparency {
+    color: $blue-transparency;
+  }
+
+  &.purple-transparency {
+    color: $purple-transparency;
+  }
+
+  &.default {
+    color: $pure-white;
+  }
+}

@@ -1,0 +1,654 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import "../base/typography";
+@import "../base/variables";
+@import "../base/breakpoints";
+
+//Display Large
+.display-large {
+    font-family: $title;
+    font-size: $desktop-display-large;
+    line-height: $line-height-80-negative;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-display-large;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-display-large;
+    }
+}
+
+//Display Medium 
+.display-medium {
+    font-family: $title;
+    font-size: $desktop-display-medium;
+    line-height: $line-height-80-negative;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-display-medium;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-display-medium;
+    }
+}
+
+//Display Small 
+.display-small {
+    font-family: $title;
+    font-size: $desktop-display-small;
+    line-height: $line-height-80-negative;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-display-small;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-display-small$tablet-display-small;
+    }
+}
+
+
+//H1
+h1 {
+    font-family: $title;
+    font-size: $desktop-h1;
+    line-height: $line-height-80-negative;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-h1;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-h1;
+    }
+}
+
+//H2
+h2 {
+    font-family: $title;
+    font-size: $desktop-h2;
+    line-height: $line-height-80-negative;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-h2;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-h2;
+    }
+}
+
+//H3
+h3 {
+    font-family: $title;
+    font-size: $desktop-h3;
+    line-height: $line-height-80-negative;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-h3;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-h3;
+    }
+}
+
+//H4
+h4 {
+    font-family: $title;
+    font-size: $desktop-h4;
+    line-height: $line-height-80-negative;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-h4;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-h4;
+    }
+}
+
+//H5
+h5 {
+    font-family: $title;
+    font-size: $desktop-h5;
+    line-height: $line-height-80-negative;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-h5;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-h5;
+    }
+}
+
+//H6
+h6 {
+    font-family: $title;
+    font-size: $desktop-h6;
+    line-height: $line-height-80-negative;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-h6;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-h6;
+    }
+}
+
+//Paragraph Large
+.paragraph-large {
+    font-family: $body;
+    font-size: $desktop-paragraph-large;
+    line-height: $line-height-120;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-paragraph-large;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-paragraph-large;
+    }
+}
+
+//Paragraph Large
+.paragraph-large {
+    font-family: $body;
+    font-size: $desktop-paragraph-large;
+    line-height: $line-height-120;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    &.italic {
+        font-style: $italic-style;
+        font-weight: $italic;
+    }
+
+    &.italic-bold {
+        font-style: $italic-style;
+        font-weight: $bold-italic;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-paragraph-large;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-paragraph-large;
+    }
+}
+
+//Paragraph Medium
+.paragraph-medium {
+    font-family: $body;
+    font-size: $desktop-paragraph-medium;
+    line-height: $line-height-120;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    &.italic {
+        font-style: $italic-style;
+        font-weight: $italic;
+    }
+
+    &.italic-bold {
+        font-style: $italic-style;
+        font-weight: $bold-italic;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-paragraph-medium;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-paragraph-medium;
+    }
+}
+
+//Paragraph Small
+.paragraph-small {
+    font-family: $body;
+    font-size: $desktop-paragraph-small;
+    line-height: $line-height-120;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    &.italic {
+        font-style: $italic-style;
+        font-weight: $italic;
+    }
+
+    &.italic-bold {
+        font-style: $italic-style;
+        font-weight: $bold-italic;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-paragraph-small;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-paragraph-small;
+    }
+}
+
+//Paragraph XSmall
+.paragraph-xsmall {
+    font-family: $body;
+    font-size: $desktop-paragraph-xsmall;
+    line-height: $line-height-120;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    &.italic {
+        font-style: $italic-style;
+        font-weight: $italic;
+    }
+
+    &.italic-bold {
+        font-style: $italic-style;
+        font-weight: $bold-italic;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-paragraph-xsmall;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-paragraph-xsmall;
+    }
+}
+
+//Paragraph XXSmall
+.paragraph-xxsmall {
+    font-family: $body;
+    font-size: $desktop-paragraph-xxsmall;
+    line-height: $line-height-120;
+
+    &.light {
+        font-weight: $light;
+    }
+
+    &.regular {
+        font-weight: $regular;
+    }
+
+    &.medium {
+        font-weight: $medium;
+    }
+
+    &.semibold {
+        font-weight: $semibold;
+    }
+
+    &.bold {
+        font-weight: $bold;
+    }
+
+    &.extrabold {
+        font-weight: $extrabold;
+    }
+
+    &.italic {
+        font-style: $italic-style;
+        font-weight: $italic;
+    }
+
+    &.italic-bold {
+        font-style: $italic-style;
+        font-weight: $bold-italic;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: $tablet-paragraph-xxsmall;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        font-size: $mobile-paragraph-xxsmall;
+    }
+}

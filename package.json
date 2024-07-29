@@ -1,0 +1,39 @@
+{
+  "name": "ds.wierzynskidevs",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "clean": "rimraf dist",
+    "create-dirs": "node scripts/createDirs.js",
+    "optimize:svgs": "node scripts/optimizeSvg.js",
+    "build:sass": "node-sass src/scss/main.scss dist/css/default.css --output-style compressed",
+    "build:icons2": "node scripts/webfont.js",
+    "copy-html": "cp -r src/*.html dist/",
+    "copy-pages": "cp -r src/pages dist/",
+    "copy-fonts": "cp -r src/fonts dist/",
+    "copy-js": "cp -r src/js dist/",
+    "copy-icons": "cp -r src/icons dist/",
+    "watch:html": "nodemon --watch src --ext html --exec \"npm run copy-html\"",
+    "watch:sass": "nodemon --watch src/scss --ext scss --exec \"npm run build:sass\"",
+    "watch:icons": "nodemon --watch src/icons --ext svg --exec \"npm run copy-icons\"",
+    "watch:pages": "nodemon --watch src/pages --ext html --exec \"npm run copy-pages\"",
+    "watch:fonts": "nodemon --watch src/fonts --ext html --exec \"npm run copy-fonts\"",
+    "watch:js": "nodemon --watch src/js --ext html --exec \"npm run copy-js\"",
+    "build": "npm run clean && npm run create-dirs && npm run build:sass && npm run copy-html && npm run copy-fonts && npm run copy-pages && npm run copy-js  && npm run copy-icons",
+    "serve": "browser-sync start --config scripts/bs-config.js",
+    "watch": "npm run build & npm-run-all --parallel watch:html watch:sass watch:pages watch:fonts watch:js watch:icons serve"
+  },
+  "author": "Pedro Serra - Wierzynski Devs",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "icon-font-generator": "^2.1.11",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
+    "webfont": "^11.2.26"
+  },
+  "dependencies": {
+    "sass": "^1.77.8"
+  }
+}

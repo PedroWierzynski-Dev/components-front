@@ -1,0 +1,154 @@
+// Swatches Light
+$swatches-transparent: rgba(255, 255, 255, 0); // #ffffff 0%
+
+// Color Brand
+$swatches-brand-primary: $primary;
+$swatches-brand-secondary: $secondary;
+$swatches-brand-tertiary: $tertiary;
+
+// Color Surface/Backgrounds
+$swatches-background: $neutral-100;
+$swatches-surface: $neutral-50;
+$swatches-surface-alt: $neutral-100;
+
+// Color Surface/On
+$swatches-on-surface-neutral: $neutral-800;
+$swatches-on-surface-neutral-alt: $neutral-600;
+
+// Color Surface/Borders
+$swatches-border: $neutral-200;
+
+// Color Surface Invert/Backgrounds
+$swatches-background-invert: $primary-deeper;
+$swatches-surface-invert: $primary-deep;
+$swatches-surface-alt-invert: $primary-default;
+
+// Color Surface Invert/On
+$swatches-on-surface-invert: $neutral-50;
+$swatches-on-surface-alt-invert: $primary-shallow;
+
+// Color SurfaceInvert/Borders
+$swatches-border-invert: $primary-shallow;
+
+// Color Base /Backgrounds
+$swatches-base-default: $neutral-0;
+$swatches-base-hover: $neutral-200;
+$swatches-base-active: $neutral-300;
+$swatches-base-selected: $neutral-0;
+$swatches-base-subtle: $neutral-200;
+$swatches-base-default-alt: $neutral-900;
+$swatches-base-hover-alt: $neutral-800;
+$swatches-base-active-alt: $neutral-700;
+$swatches-base-selected-alt: $neutral-1000;
+$swatches-base-subtle-alt: $neutral-800;
+
+// Color Base/On
+$swatches-on-base: $neutral-800;
+$swatches-on-surface-base: $neutral-900;
+$swatches-on-base-alt: $neutral-400;
+$swatches-on-surface-base-alt: $neutral-200;
+
+// Color Base/Borders
+$swatches-border-base: $neutral-400;
+$swatches-border-base-alt: $neutral-200;
+$swatches-border-base-subtle: $neutral-50;
+$swatches-border-base-subtle-alt: $neutral-600;
+$swatches-border-base-focus: $neutral-400;
+$swatches-border-base-focus-alt: $neutral-600;
+$swatches-border-base-input: $neutral-400;
+
+// Color Primary/Backgrounds
+$swatches-primary-default: $primary-deep;
+$swatches-primary-hover: $primary-default;
+$swatches-primary-active: $primary-deeper;
+$swatches-primary-selected: $primary-shallow;
+$swatches-primary-subtle: $primary-transparency;
+
+// Color Primary/On
+$swatches-on-primary: $neutral-0;
+$swatches-on-surface-primary: $primary-default;
+
+// Color Primary/Borders
+$swatches-border-primary: $primary-deep;
+$swatches-border-primary-subtle: $primary-shallower;
+$swatches-border-primary-focus: $primary-shallow;
+
+// Color Secondary/Backgrounds
+$swatches-secondary-default: $secondary-deep;
+$swatches-secondary-hover: $secondary-default;
+$swatches-secondary-active: $secondary-deeper;
+$swatches-secondary-selected: $secondary-shallow;
+$swatches-secondary-subtle: $secondary-transparency;
+
+// Color Secondary/On
+$swatches-on-secondary: $neutral-0;
+$swatches-on-surface-secondary: $secondary-default;
+
+// Color Secondary/Borders
+$swatches-border-secondary: $secondary-deep;
+$swatches-border-secondary-subtle: $secondary-shallower;
+$swatches-border-secondary-focus: $secondary-shallow;
+
+// Color Tertiary/Backgrounds
+$swatches-tertiary-default: $tertiary-deep;
+$swatches-tertiary-hover: $tertiary-default;
+$swatches-tertiary-active: $tertiary-deeper;
+$swatches-tertiary-selected: $tertiary-shallow;
+$swatches-tertiary-subtle: $tertiary-transparency;
+
+// Color Tertiary/On
+$swatches-on-tertiary: $neutral-0;
+$swatches-on-surface-tertiary: $tertiary-default;
+
+// Color Tertiary/Borders
+$swatches-border-tertiary: $tertiary-deep;
+$swatches-border-tertiary-subtle: $tertiary-shallower;
+$swatches-border-tertiary-focus: $tertiary-shallow;
+
+// Color Success/Backgrounds
+$swatches-success-default: $success-deep;
+$swatches-success-hover: $success-default;
+$swatches-success-active: $success-deeper;
+$swatches-success-selected: $success-shallow;
+$swatches-success-subtle: $success-transparency;
+
+// Color Success/On
+$swatches-on-success: $neutral-0;
+$swatches-on-surface-success: $success-deep;
+
+// Color Success/Borders
+$swatches-border-success: $success-deep;
+$swatches-border-success-subtle: $success-shallower;
+$swatches-border-success-focus: $success-shallow;
+
+// Color Warning/Backgrounds
+$swatches-warning-default: $warning-deep;
+$swatches-warning-hover: $warning-default;
+$swatches-warning-active: $warning-deeper;
+$swatches-warning-selected: $warning-shallow;
+$swatches-warning-subtle: $warning-transparency;
+
+// Color Warning/On
+$swatches-on-warning: $neutral-0;
+$swatches-on-surface-warning: $warning-deep;
+
+// Color Warning/Borders
+$swatches-border-warning: $warning-deep;
+$swatches-border-warning-subtle: $warning-shallower;
+$swatches-border-warning-focus: $warning-shallow;
+
+// Color Error/Backgrounds
+$swatches-error-default: $destructive-deep;
+$swatches-error-hover: $destructive-default;
+$swatches-error-active: $destructive-deeper;
+$swatches-error-selected: $destructive-shallow;
+$swatches-error-subtle: $destructive-transparency;
+
+// Color Error/On
+$swatches-on-error: $neutral-0;
+$swatches-on-surface-error: $destructive-deep;
+
+// Color Error/Borders
+$swatches-border-error: $destructive-default;
+$swatches-border-error-subtle: $destructive-shallower;
+$swatches-border-error-focus: $destructive-shallow;

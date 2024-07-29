@@ -1,0 +1,298 @@
+@import "../base/borders";
+@import "../base/variables";
+
+.btn {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $swatches-base-default;
+    border-color: $swatches-border-base;
+    color: $swatches-on-base;
+    border-radius: $border-radius-full;
+    border: 1px solid;
+
+
+    &.icon-small {
+        width: $button-icon-small;
+        height: $button-icon-small;
+
+        >i {
+            font-size: 17.26px;
+            height: 17.26px;
+            ;
+        }
+    }
+
+    &.icon-medium {
+        width: $button-icon-medium;
+        height: $button-icon-medium;
+
+        >i {
+            font-size: 24px;
+            height: 24px;
+        }
+    }
+
+    &.icon-large {
+        width: $button-icon-large;
+        height: $button-icon-large;
+
+        >i {
+            font-size: 32px;
+            height: 32px;
+        }
+    }
+
+    &.icon-xlarge {
+        width: $button-icon-xlarge;
+        height: $button-icon-xlarge;
+
+        >i {
+            font-size: 40px;
+            height: 40px;
+        }
+    }
+
+
+    &.primary {
+        color: $swatches-on-secondary;
+        background-color: $swatches-primary-default;
+
+        &:hover {
+            background-color: $swatches-primary-hover !important;
+        }
+
+        &:active {
+            background-color: $swatches-primary-active !important;
+        }
+
+        &:focus-visible {
+            background-color: $swatches-primary-default !important;
+            border-color: $swatches-border-primary-focus !important;
+            border-width: $button-focus-visible-border-width;
+        }
+
+        &::selection {
+            background-color: $swatches-primary-selected !important;
+        }
+
+        &:disabled {
+            background-color: $swatches-primary-subtle !important;
+            color: $swatches-on-secondary !important;
+        }
+    }
+
+    &.secondary {
+        color: $swatches-on-secondary;
+        background-color: $swatches-secondary-default;
+
+
+
+
+        &:hover {
+            background-color: $swatches-secondary-hover !important;
+        }
+
+        &:active {
+            background-color: $swatches-secondary-active !important;
+        }
+
+        &:focus-visible {
+            background-color: $swatches-secondary-default !important;
+            border-color: $swatches-border-secondary-focus !important;
+            border-width: $button-focus-visible-border-width;
+        }
+
+        &::selection {
+            background-color: $swatches-secondary-selected !important;
+        }
+
+        &:disabled {
+            background-color: $swatches-secondary-subtle !important;
+            color: $swatches-on-secondary !important;
+        }
+    }
+
+    &.tertiary {
+        color: $swatches-on-secondary;
+        background-color: $swatches-tertiary-default;
+
+        &:hover {
+            background-color: $swatches-tertiary-hover !important;
+        }
+
+        &:active {
+            background-color: $swatches-tertiary-active !important;
+        }
+
+        &:focus-visible {
+            background-color: $swatches-tertiary-default !important;
+            border-color: $swatches-border-tertiary-focus !important;
+            border-width: $button-focus-visible-border-width;
+        }
+
+        &::selection {
+            background-color: $swatches-tertiary-selected !important;
+        }
+
+        &:disabled {
+            background-color: $swatches-tertiary-subtle !important;
+            color: $swatches-on-secondary !important;
+        }
+    }
+
+    &.success {
+        color: $swatches-on-secondary;
+        background-color: $swatches-success-default;
+
+        &:hover {
+            background-color: $swatches-success-hover !important;
+        }
+
+        &:active {
+            background-color: $swatches-success-active !important;
+        }
+
+        &:focus-visible {
+            background-color: $swatches-success-default !important;
+            border-color: $swatches-border-success-focus !important;
+            border-width: $button-focus-visible-border-width;
+        }
+
+        &::selection {
+            background-color: $swatches-success-selected !important;
+        }
+
+        &:disabled {
+            background-color: $swatches-success-subtle !important;
+            color: $swatches-on-secondary !important;
+        }
+    }
+
+    &.warning {
+        color: $swatches-on-secondary;
+        background-color: $swatches-warning-default;
+
+        &:hover {
+            background-color: $swatches-warning-hover !important;
+        }
+
+        &:active {
+            background-color: $swatches-warning-active !important;
+        }
+
+        &:focus-visible {
+            background-color: $swatches-warning-default !important;
+            border-color: $swatches-border-warning-focus !important;
+            border-width: $button-focus-visible-border-width;
+        }
+
+        &::selection {
+            background-color: $swatches-warning-selected !important;
+        }
+
+        &:disabled {
+            background-color: $swatches-warning-subtle !important;
+            color: $swatches-on-secondary !important;
+        }
+    }
+
+    &.error {
+        color: $swatches-on-secondary;
+        background-color: $swatches-error-default;
+
+        &:hover {
+            background-color: $swatches-error-hover !important;
+        }
+
+        &:active {
+            background-color: $swatches-error-active !important;
+        }
+
+        &:focus-visible {
+            background-color: $swatches-error-default !important;
+            border-color: $swatches-border-error-focus !important;
+            border-width: $button-focus-visible-border-width;
+        }
+
+        &::selection {
+            background-color: $swatches-error-selected !important;
+        }
+
+        &:disabled {
+            background-color: $swatches-error-subtle !important;
+            color: $swatches-on-secondary !important;
+        }
+    }
+
+
+    &.small {
+        padding: $button-small-padding;
+        width: $button-small-width;
+        height: $button-small-height;
+
+        >i {
+            font-size: 17.26px;
+            padding: 3px;
+        }
+
+    }
+
+    &.medium {
+        padding: $button-medium-padding;
+        width: $button-medium-width;
+        height: $button-medium-height;
+
+        >i {
+            font-size: 24px;
+            padding: 3px;
+        }
+    }
+
+    &.large {
+        padding: $button-large-padding;
+        width: $button-large-width;
+        height: $button-large-height;
+
+        >i {
+            font-size: 32px;
+            padding: 3px;
+        }
+    }
+
+    &.xlarge {
+        padding: $button-xlarge-padding;
+        width: $button-xlarge-width;
+        height: $button-xlarge-height;
+
+        >i {
+            font-size: 40px;
+            padding: 3px;
+        }
+    }
+
+    &:hover {
+        background-color: $swatches-base-hover !important;
+    }
+
+    &:active {
+        background-color: $swatches-base-active !important;
+    }
+
+    &:focus-visible {
+        background-color: $swatches-base-default !important;
+        border-color: $swatches-border-base-focus !important;
+        border-width: $button-focus-visible-border-width;
+    }
+
+    &::selection {
+        background-color: $swatches-base-selected !important;
+    }
+
+    &:disabled {
+        background-color: $swatches-base-subtle !important;
+        color: $swatches-on-base !important;
+    }
+}

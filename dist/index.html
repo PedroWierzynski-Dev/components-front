@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <title>Design System - Wierzynski Devs</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+      }
+
+      .toggle-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: -10px 0 -90px;
+      }
+
+      .toggle-checkbox {
+        display: none;
+      }
+
+      .toggle-label {
+        display: flex;
+        align-items: center;
+        width: 66px;
+        height: 36px;
+        background-color: #80e8ff;
+        border-radius: 30px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        background-image: linear-gradient(135deg, #80e8ff 50%, #b0e0e6 100%),
+          radial-gradient(circle at 10% 10%, white 3%, transparent 4%),
+          radial-gradient(circle at 35% 20%, white 3%, transparent 4%),
+          radial-gradient(circle at 25% 35%, white 3%, transparent 4%);
+        background-size: cover;
+        background-position: center;
+        border: 3px solid #262626;
+      }
+
+      .toggle-switch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        background-color: rgba(244, 244, 244, 0.75);
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        transition: left 0.3s, background-color 0.3s;
+        border: 1.5px solid rgba(38, 38, 38, 0.5);
+        -webkit-box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .sun-icon,
+      .moon-icon {
+        position: absolute;
+        font-size: 18px;
+        transition: opacity 0.3s;
+        bottom: 0;
+      }
+
+      .sun-icon {
+        opacity: 1;
+      }
+
+      .moon-icon {
+        opacity: 0;
+      }
+
+      .toggle-checkbox:checked + .toggle-label {
+        background-color: #171717;
+        background-image: linear-gradient(225deg, #171717 50%, #434343 100%),
+          radial-gradient(circle at 30% 30%, #ffffff 1%, transparent 1.5%),
+          radial-gradient(circle at 70% 40%, #ffffff 1%, transparent 1.5%),
+          radial-gradient(circle at 50% 70%, #ffffff 1%, transparent 1.5%);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .toggle-checkbox:checked + .toggle-label .toggle-switch {
+        left: 33px;
+      }
+
+      .toggle-checkbox:checked + .toggle-label .toggle-switch .sun-icon {
+        opacity: 0;
+      }
+
+      .toggle-checkbox:checked + .toggle-label .toggle-switch .moon-icon {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body class="pages_header--dark">
+    <header class="pages_header--dark">
+      <div class="toggle-container">
+        <input type="checkbox" id="toggle" class="toggle-checkbox" />
+        <label for="toggle" class="toggle-label">
+          <span class="toggle-switch">
+            <span class="sun-icon">🌞</span>
+            <span class="moon-icon">🌜</span>
+          </span>
+        </label>
+      </div>
+
+      <div class="pages_header--dark">
+        <ul
+          style="
+            display: flex;
+            gap: 25px;
+            list-style-type: none;
+            color: #ffffff;
+          "
+        >
+          <li>
+            <a style="color: #ffffff; text-decoration: none" href="/">Home</a>
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/typography.html"
+              >Tipografia</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/buttons.html"
+              >Botões</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/hiperlinks.html"
+              >Hiperlinks</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/inputs.html"
+              >Inputs</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/alerts.html"
+              >Alerts</a
+            >
+          </li>
+        </ul>
+
+        <br />
+        <br />
+        <br />
+    </header>
+
+    <main>
+        <h1>Design System</h1>
+    </main>
+    
+    <script src="../js/toggle.js"></script>
+    <script>
+        const toggleCheckbox = document.getElementById('toggle');
+  
+        toggleCheckbox.addEventListener('change', () => {
+          let dark = document.body.classList.toggle('dark-theme');
+          let defaut = document.body.classList.toggle('');
+          console.log(dark);
+          console.log(defaut);
+        });
+      </script>
+    <script>
+      document.querySelectorAll('a.disabled').forEach((link) => {
+        console.log(link);
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>

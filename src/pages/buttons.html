@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/icons.css" />
+    <title>Wierzynski Devs Design System - Buttons</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .toggle-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: -10px 0 -90px;
+      }
+
+      .toggle-checkbox {
+        display: none;
+      }
+
+      .toggle-label {
+        display: flex;
+        align-items: center;
+        width: 66px;
+        height: 36px;
+        background-color: #80e8ff;
+        border-radius: 30px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        background-image: linear-gradient(135deg, #80e8ff 50%, #b0e0e6 100%),
+          radial-gradient(circle at 10% 10%, white 3%, transparent 4%),
+          radial-gradient(circle at 35% 20%, white 3%, transparent 4%),
+          radial-gradient(circle at 25% 35%, white 3%, transparent 4%);
+        background-size: cover;
+        background-position: center;
+        border: 3px solid #262626;
+      }
+
+      .toggle-switch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        background-color: rgba(244, 244, 244, 0.75);
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        transition: left 0.3s, background-color 0.3s;
+        border: 1.5px solid rgba(38, 38, 38, 0.5);
+        -webkit-box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .sun-icon,
+      .moon-icon {
+        position: absolute;
+        font-size: 18px;
+        transition: opacity 0.3s;
+        bottom: 0;
+      }
+
+      .sun-icon {
+        opacity: 1;
+      }
+
+      .moon-icon {
+        opacity: 0;
+      }
+
+      .toggle-checkbox:checked + .toggle-label {
+        background-color: #171717;
+        background-image: linear-gradient(225deg, #171717 50%, #434343 100%),
+          radial-gradient(circle at 30% 30%, #ffffff 1%, transparent 1.5%),
+          radial-gradient(circle at 70% 40%, #ffffff 1%, transparent 1.5%),
+          radial-gradient(circle at 50% 70%, #ffffff 1%, transparent 1.5%);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .toggle-checkbox:checked + .toggle-label .toggle-switch {
+        left: 33px;
+      }
+
+      .toggle-checkbox:checked + .toggle-label .toggle-switch .sun-icon {
+        opacity: 0;
+      }
+
+      .toggle-checkbox:checked + .toggle-label .toggle-switch .moon-icon {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #ffffff">
+    <header class="pages_header--dark">
+      <div class="toggle-container">
+        <input type="checkbox" id="toggle" class="toggle-checkbox" />
+        <label for="toggle" class="toggle-label">
+          <span class="toggle-switch">
+            <span class="sun-icon">🌞</span>
+            <span class="moon-icon">🌜</span>
+          </span>
+        </label>
+      </div>
+
+      <div class="pages_header--dark">
+        <ul
+          style="
+            display: flex;
+            gap: 25px;
+            list-style-type: none;
+            color: #ffffff;
+          "
+        >
+          <li>
+            <a style="color: #ffffff; text-decoration: none" href="/">Home</a>
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/typography.html"
+              >Tipografia</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/buttons.html"
+              >Botões</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/hiperlinks.html"
+              >Hiperlinks</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/inputs.html"
+              >Inputs</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/alerts.html"
+              >Alerts</a
+            >
+          </li>
+        </ul>
+
+        <br />
+        <br />
+        <br />
+
+      <div class="paragraph-large medium">
+        Wierzynski Devs Design System / CORE-Basics
+      </div>
+      <div class="display-small medium">Button</div>
+      <br />
+      <div class="paragraph-medium regular">
+        Os “Buttons” estão disponíveis nos tamanhos Small, Medium, Large e
+        XLarge, com variações que incluem apenas ícone, texto e ícone, ou apenas
+        texto. Eles abrangem diferentes estados, como Base, Primário,
+        Secundário, Terciário, Sucesso, Atenção e Erro. Essa versatilidade
+        garante que os botões atendam a diversas necessidades e contextos dentro
+        da interface, proporcionando uma experiência de usuário intuitiva e
+        consistente.
+      </div>
+    </div>
+    <div class="pages_components--bg-neutral">
+      <div
+        style="
+          border: 1px dashed #9747ff;
+          padding: 30px;
+          max-width: 356px;
+          border-radius: 8px;
+        "
+      >
+        <div style="display: flex; gap: 15px">
+          <button class="btn icon-small">
+            <i class="icon icon-add-square"></i>
+          </button>
+          <button class="btn small">
+            <i class="icon icon-add-square"></i>BUTTON<i
+              class="icon icon-add-square"
+            ></i>
+          </button>
+        </div>
+        <br />
+        <div style="display: flex; gap: 15px">
+          <button class="btn icon-medium">
+            <i class="icon icon-add-square"></i>
+          </button>
+          <button class="btn medium">
+            <i class="icon icon-add-square"></i>BUTTON<i
+              class="icon icon-add-square"
+            ></i>
+          </button>
+        </div>
+        <br />
+        <div style="display: flex; gap: 15px">
+          <button class="btn icon-large">
+            <i class="icon icon-add-square"></i>
+          </button>
+          <button class="btn large">
+            <i class="icon icon-add-square"></i>BUTTON<i
+              class="icon icon-add-square"
+            ></i>
+          </button>
+        </div>
+        <br />
+        <div style="display: flex; gap: 15px">
+          <button class="btn icon-xlarge">
+            <i class="icon icon-add-square"></i>
+          </button>
+          <button class="btn xlarge">
+            <i class="icon icon-add-square"></i>BUTTON<i
+              class="icon icon-add-square"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="pages_components--pure-white">
+      <div
+        style="border: 1px dashed #9747ff; padding: 30px; border-radius: 8px"
+      >
+        <div>
+          <p style="margin-bottom: 10px">Default</p>
+          <div
+            style="
+              display: flex;
+              gap: 10px;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <button class="btn medium">
+              <i class="icon icon-add-square primary-default"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+
+            <button class="btn primary medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+
+            <button class="btn secondary medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+
+            <button class="btn tertiary medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+
+            <button class="btn success medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+
+            <button class="btn warning medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+
+            <button class="btn error medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <p style="margin-bottom: 10px">Disabled</p>
+          <div
+            style="
+              display: flex;
+              gap: 10px;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <button disabled class="btn medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+
+            <button disabled class="btn primary medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+
+            <button disabled class="btn secondary medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+
+            <button disabled class="btn tertiary medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+
+            <button disabled class="btn success medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+
+            <button disabled class="btn warning medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+
+            <button disabled class="btn error medium">
+              <i class="icon icon-add-square"></i>BUTTON<i
+                class="icon icon-add-square"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="pages_footer--dark">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div class="paragraph-large medium">© 2024 - Wierzynski Devs</div>
+        <!-- <img
+          src="https://app.epays.com.br/assets/images/Wierzynski Devs-logo-%402x.png"
+          alt="Logo da Wierzynski Devs"
+          width="100"
+        /> -->
+      </div>
+    </footer>
+
+    <script src="../js/toggle.js"></script>
+    <script>
+      const toggleCheckbox = document.getElementById('toggle');
+
+      toggleCheckbox.addEventListener('change', () => {
+        let dark = document.body.classList.toggle('dark-theme');
+        let defaut = document.body.classList.toggle('');
+        console.log(dark);
+        console.log(defaut);
+      });
+    </script>
+    <script>
+      document.querySelectorAll('a.disabled').forEach((link) => {
+        console.log(link);
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>

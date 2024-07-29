@@ -1,0 +1,192 @@
+@import '../base/variables';
+@import '../colors/default';
+
+i {
+  font-size: $icons-size;
+}
+
+.icon {
+  &.primary-default {
+    svg {
+      path {
+        stroke: $primary;
+      }
+    }
+  }
+
+  &.secondary-default {
+    svg {
+      path {
+        stroke: $secondary;
+      }
+    }
+  }
+
+  &.tertiary-default {
+    svg {
+      path {
+        stroke: $tertiary;
+      }
+    }
+  }
+
+  &.success-default {
+    svg {
+      path {
+        stroke: $success-default;
+      }
+    }
+  }
+
+  &.warning-default {
+    svg {
+      path {
+        stroke: $warning-default;
+      }
+    }
+  }
+
+  &.destructive-default {
+    svg {
+      path {
+        stroke: $destructive-default;
+      }
+    }
+  }
+
+  &.red-default {
+    svg {
+      path {
+        stroke: $red-default;
+      }
+    }
+  }
+
+  &.yellow-default {
+    svg {
+      path {
+        stroke: $yellow-default;
+      }
+    }
+  }
+
+  &.green-default {
+    svg {
+      path {
+        stroke: $green-default;
+      }
+    }
+  }
+
+  &.blue-default {
+    svg {
+      path {
+        stroke: $blue-default;
+      }
+    }
+  }
+
+  &.purple-default {
+    svg {
+      path {
+        stroke: $purple-default;
+      }
+    }
+  }
+
+  &.primary-transparency {
+    svg {
+      path {
+        stroke: $primary-transparency;
+      }
+    }
+  }
+
+  &.secondary-transparency {
+    svg {
+      path {
+        stroke: $secondary-transparency;
+      }
+    }
+  }
+
+  &.tertiary-transparency {
+    svg {
+      path {
+        stroke: $tertiary-transparency;
+      }
+    }
+  }
+
+  &.success-transparency {
+    svg {
+      path {
+        stroke: $success-transparency;
+      }
+    }
+  }
+
+  &.warning-transparency {
+    svg {
+      path {
+        stroke: $warning-transparency;
+      }
+    }
+  }
+
+  &.destructive-transparency {
+    svg {
+      path {
+        stroke: $destructive-transparency;
+      }
+    }
+  }
+
+  &.red-transparency {
+    svg {
+      path {
+        stroke: $red-transparency;
+      }
+    }
+  }
+
+  &.yellow-transparency {
+    svg {
+      path {
+        stroke: $yellow-transparency;
+      }
+    }
+  }
+
+  &.green-transparency {
+    svg {
+      path {
+        stroke: $green-transparency;
+      }
+    }
+  }
+
+  &.blue-transparency {
+    svg {
+      path {
+        stroke: $blue-transparency;
+      }
+    }
+  }
+
+  &.purple-transparency {
+    svg {
+      path {
+        stroke: $purple-transparency;
+      }
+    }
+  }
+
+  &.default {
+    svg {
+      path {
+        stroke: $pure-white;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import 'base/borders';
+@import 'base/breakpoints';
+@import 'base/icons';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/spacing';
+
+@import 'colors/default';
+@import 'swatches/swatches';
+@import 'components/buttons';
+
+@import 'themes/dark';
+@import 'themes/default';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $body;
+}
+
+.pages_header--dark {
+  background-color: $primary;
+  padding: $spacing-desktop-xxxh;
+  color: $pure-white;
+}
+
+.pages_components--bg-neutral {
+  padding: $spacing-desktop-xl;
+  background-color: $neutral-200;
+}
+
+.pages_components--pure-white {
+  padding: $spacing-desktop-xl;
+  background-color: $pure-white;
+}
+
+.pages_footer--dark {
+  background-color: $primary;
+  padding: $spacing-desktop-xxxh;
+  color: $pure-white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: transparent;
+}
+
+.font-size,
+.font-weight,
+.letter-spacing,
+.line-height,
+.paragraph-spacing,
+.paragraph-indent,
+.list-spacing {
+  text-align: start;
+}

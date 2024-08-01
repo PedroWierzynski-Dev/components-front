@@ -21,8 +21,6 @@ function updateSvgColors() {
     .getPropertyValue('--primary-default')
     .trim();
 
-  console.log('Primary color: ', primaryColor); // Adicionado para depuração
-
   svgStrokes.forEach(function (stroke) {
     let paths = stroke.querySelectorAll('path');
     paths.forEach(function (path) {
@@ -37,12 +35,9 @@ function updateSvgColors() {
 
 function updateLinkColors() {
   let links = document.querySelectorAll('a.primary-default');
-  console.log(links);
   let primaryColor = getComputedStyle(document.documentElement)
     .getPropertyValue('color')
     .trim();
-
-  console.log('Primary color for links: ', primaryColor); // Adicionado para depuração
 
   links.forEach(function (link) {
     if (primaryColor) {
@@ -71,4 +66,23 @@ document.addEventListener('DOMContentLoaded', function () {
     loadSvg(iconName, container);
   });
   updateColors();
+});
+
+function loadFlagSvg(flagName, container) {
+  fetch(`/flags/${flagName}.svg`)
+    .then((response) => response.text())
+    .then((data) => {
+      container.innerHTML = data;
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  let flagContainers = document.querySelectorAll('.flag');
+  flagContainers.forEach(function (container) {
+    let flagName = container.className
+      .split(' ')
+      .find((cls) => cls.startsWith('flag-'))
+      .split('flag-')[1];
+    loadFlagSvg(flagName, container);
+  });
 });

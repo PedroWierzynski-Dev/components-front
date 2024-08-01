@@ -8,6 +8,7 @@ const directories = [
     path.join(__dirname, '../dist', 'css'),
     path.join(__dirname, '../dist', 'js'),
     path.join(__dirname, '../dist', 'icons'),
+    path.join(__dirname, '../dist', 'flags'),
 ];
 
 // Criar diretórios se não existirem

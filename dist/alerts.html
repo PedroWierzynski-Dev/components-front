@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/icons.css" />
+    <title>Alertas</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .toggle-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: -10px 0 -90px;
+      }
+
+      .toggle-checkbox {
+        display: none;
+      }
+
+      .toggle-label {
+        display: flex;
+        align-items: center;
+        width: 66px;
+        height: 36px;
+        background-color: #80e8ff;
+        border-radius: 30px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        background-image: linear-gradient(135deg, #80e8ff 50%, #b0e0e6 100%),
+          radial-gradient(circle at 10% 10%, white 3%, transparent 4%),
+          radial-gradient(circle at 35% 20%, white 3%, transparent 4%),
+          radial-gradient(circle at 25% 35%, white 3%, transparent 4%);
+        background-size: cover;
+        background-position: center;
+        border: 3px solid #262626;
+      }
+
+      .toggle-switch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        background-color: rgba(244, 244, 244, 0.75);
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        transition: left 0.3s, background-color 0.3s;
+        border: 1.5px solid rgba(38, 38, 38, 0.5);
+        -webkit-box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .sun-icon,
+      .moon-icon {
+        position: absolute;
+        font-size: 18px;
+        transition: opacity 0.3s;
+        bottom: 0;
+      }
+
+      .sun-icon {
+        opacity: 1;
+      }
+
+      .moon-icon {
+        opacity: 0;
+      }
+
+      .toggle-checkbox:checked + .toggle-label {
+        background-color: #171717;
+        background-image: linear-gradient(225deg, #171717 50%, #434343 100%),
+          radial-gradient(circle at 30% 30%, #ffffff 1%, transparent 1.5%),
+          radial-gradient(circle at 70% 40%, #ffffff 1%, transparent 1.5%),
+          radial-gradient(circle at 50% 70%, #ffffff 1%, transparent 1.5%);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .toggle-checkbox:checked + .toggle-label .toggle-switch {
+        left: 33px;
+      }
+
+      .toggle-checkbox:checked + .toggle-label .toggle-switch .sun-icon {
+        opacity: 0;
+      }
+
+      .toggle-checkbox:checked + .toggle-label .toggle-switch .moon-icon {
+        opacity: 1;
+      }
+
+      .svg-stroke {
+        stroke: var(--svg-stroke-color);
+        fill: none;
+      }
+
+      body.dark-theme .svg-stroke {
+        stroke: var(--svg-stroke-color-dark);
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #ffffff">
+    <header class="pages_header--dark">
+      <div class="toggle-container">
+        <input type="checkbox" id="toggle" class="toggle-checkbox" />
+        <label for="toggle" class="toggle-label">
+          <span class="toggle-switch">
+            <span class="sun-icon">🌞</span>
+            <span class="moon-icon">🌜</span>
+          </span>
+        </label>
+      </div>
+
+      <div class="pages_header--dark">
+        <ul
+          style="
+            display: flex;
+            gap: 25px;
+            list-style-type: none;
+            color: #ffffff;
+          "
+        >
+          <li>
+            <a style="color: #ffffff; text-decoration: none" href="/">Home</a>
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/typography.html"
+              >Tipografia</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/buttons.html"
+              >Botões</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/hiperlinks.html"
+              >Hiperlinks</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/inputs.html"
+              >Inputs</a
+            >
+          </li>
+          <li>
+            <a
+              style="color: #ffffff; text-decoration: none"
+              href="../pages/alerts.html"
+              >Alerts</a
+            >
+          </li>
+        </ul>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="paragraph-large medium">
+          Employer Design System / CORE-Basics
+        </div>
+        <div class="display-small medium">Alerts</div>
+        <br />
+        <div class="paragraph-medium regular">
+          Os Alertas são utilizados para feeedback do sistema e áreas de
+          destaque. Estão disponíveis nos estados Base, Primário, Secundário,
+          Terciário, Sucesso, Atenção e Erro. Essa diversidade de estados
+          assegura que os alertas possam comunicar diferentes tipos de mensagens
+          e níveis de importância de maneira clara e eficaz, melhorando a
+          experiência do usuário e a usabilidade da interface.
+        </div>
+      </div>
+    </header>
+
+    <main class="pages_components--bg-neutral">
+      <div
+        style="
+          border: 1px dashed #9747ff;
+          padding: 30px;
+          max-width: 356px;
+          border-radius: 8px;
+        "
+      >
+        <div style="display: flex; gap: 15px">
+          <button class="btn small" id="showCleanAlertButton">Claro</button>
+        </div>
+        <br />
+        <div style="display: flex; gap: 15px">
+          <button class="btn large" id="showBiggerAlertButton">
+            Ícones Grandes
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div class="pages_components--pure-white">
+      <div
+        style="
+          border: 1px dashed #9747ff;
+          padding: 30px;
+          max-width: 356px;
+          border-radius: 8px;
+        "
+      >
+        <div style="display: flex; gap: 15px">
+          <button class="btn small primary" id="showPrimaryAlertButton">
+            Primária
+          </button>
+        </div>
+        <br />
+        <div style="display: flex; gap: 15px">
+          <button class="btn small secondary" id="showSecondaryAlertButton">
+            Secundária
+          </button>
+        </div>
+        <br />
+        <div style="display: flex; gap: 15px">
+          <button class="btn small tertiary" id="showTertiaryAlertButton">
+            Terciária
+          </button>
+        </div>
+        <br />
+        <div style="display: flex; gap: 15px">
+          <button class="btn small success" id="showSuccessAlertButton">
+            Sucesso
+          </button>
+        </div>
+        <br />
+        <div style="display: flex; gap: 15px">
+          <button class="btn small warning" id="showWarningAlertButton">
+            Alerta
+          </button>
+        </div>
+        <br />
+        <div style="display: flex; gap: 15px">
+          <button class="btn small error" id="showDestructiveAlertButton">
+            Erro
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="alertContainer" style="display: flex; gap: 15px"></div>
+    <br />
+
+    <footer class="pages_footer--dark">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div class="paragraph-large medium">© 2024 - Grupo Employer</div>
+        <img
+          src="https://app.epays.com.br/assets/images/employer-logo-%402x.png"
+          alt="Logo da Employer"
+          width="100"
+        />
+      </div>
+    </footer>
+
+    <script>
+      const toggleCheckbox = document.getElementById('toggle');
+
+      toggleCheckbox.addEventListener('change', () => {
+        let dark = document.body.classList.toggle('dark-theme');
+        let defaut = document.body.classList.toggle('');
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const alertContainer = document.getElementById('alertContainer');
+        const loremIpsum =
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum exercitationem incidunt, impedit ea ipsum accusamus doloribus libero recusandae. Corrupti aperiam a dolorum nesciunt pariatur ad repellendus quis ducimus.';
+
+        let iconContainers = document.querySelectorAll('.icon');
+
+        iconContainers.forEach(function (container) {
+          let iconName = container.className
+            .split(' ')
+            .find((cls) => cls.startsWith('icon-'))
+            .split('icon-')[1];
+          loadSvg(iconName, container);
+        });
+
+        document
+          .getElementById('showCleanAlertButton')
+          .addEventListener('click', () => {
+            showAlert(
+              '',
+              'Exemplo de Alert básico',
+              `Este é um alerta básico! ${loremIpsum}`,
+              'Confirmo'
+            );
+          });
+
+        document
+          .getElementById('showBiggerAlertButton')
+          .addEventListener('click', () => {
+            showAlert(
+              '',
+              'Exemplo de Alert básico com ícones grandes',
+              `Este é um alerta básico com ícones grandes! ${loremIpsum}`,
+              'Confirmo'
+            );
+          });
+
+        document
+          .getElementById('showPrimaryAlertButton')
+          .addEventListener('click', () => {
+            showAlert(
+              'primary',
+              'Cor primária',
+              `Este é um alerta de cor primária! ${loremIpsum}`,
+              'Confirmo'
+            );
+          });
+
+        document
+          .getElementById('showSecondaryAlertButton')
+          .addEventListener('click', () => {
+            showAlert(
+              'secondary',
+              'Cor secundária',
+              `Este é um alerta de cor secundária! ${loremIpsum}`,
+              'Confirmo'
+            );
+          });
+
+        document
+          .getElementById('showTertiaryAlertButton')
+          .addEventListener('click', () => {
+            showAlert(
+              'tertiary',
+              'Cor terciária',
+              `Este é um alerta de cor terciária! ${loremIpsum}`,
+              'Confirmo'
+            );
+          });
+
+        document
+          .getElementById('showSuccessAlertButton')
+          .addEventListener('click', () => {
+            showAlert(
+              'success',
+              'Sucesso!',
+              `Este é um alerta de sucesso! ${loremIpsum}`,
+              'Confirmo'
+            );
+          });
+
+        document
+          .getElementById('showWarningAlertButton')
+          .addEventListener('click', () => {
+            showAlert(
+              'warning',
+              'Alerta',
+              `Este é um alerta para aviso! ${loremIpsum}`,
+              'Confirmo'
+            );
+          });
+
+        document
+          .getElementById('showDestructiveAlertButton')
+          .addEventListener('click', () => {
+            showAlert(
+              'error',
+              'Erro',
+              `Este é um alerta para erros! ${loremIpsum}`,
+              'Confirmo'
+            );
+          });
+
+        function loadSvg(iconName, container) {
+          fetch(`/icons/${iconName}.svg`)
+            .then((response) => console.log('response', response))
+            .then((data) => {
+              console.log('data', data);
+              container.innerHTML = data;
+              const svg = container.querySelector('svg');
+            })
+            .catch((error) => {
+              console.error(`Erro ao carregar o ícone ${iconName}:`, error);
+            });
+        }
+
+        function showAlert(type, title, message, actionText) {
+          const overlay = document.createElement('div');
+          overlay.className = 'overlay';
+          document.body.appendChild(overlay);
+
+          console.log(`../icons/${getIconPath(type)}.svg`);
+
+          const alertDiv = document.createElement('div');
+          alertDiv.className = `alert alert-${type}`;
+          alertDiv.innerHTML = `
+          <div class="alert-content">
+              <i class="icon icon-add-square ${type}"></i>
+              <h2>${title}</h2>
+              <p>${message}</p>
+              <div class="alert-buttons">
+                  <button class="cancel-button semibold">Cancelar</button>
+                  <button class="action-button semibold">${actionText}</button>
+              </div>
+          </div>
+      `;
+
+          console.log(alertDiv);
+
+          overlay.appendChild(alertDiv);
+
+          overlay.style.display = 'flex';
+          alertDiv.style.display = 'block';
+
+          const cancelButton = alertDiv.querySelector('.cancel-button');
+          cancelButton.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            document.body.removeChild(overlay);
+          });
+
+          const actionButton = alertDiv.querySelector('.action-button');
+          actionButton.addEventListener('click', () => {
+            alert(`Action "${actionText}" clicked!`);
+            overlay.style.display = 'none';
+            document.body.removeChild(overlay);
+          });
+        }
+
+        function getIconPath(type) {
+          const alertIcon = 'master-alert';
+          switch (type) {
+            case 'success':
+              return `${alertIcon}-success`;
+            case 'warning':
+              return `${alertIcon}-warning`;
+            case 'error':
+              return `${alertIcon}-destructive`;
+            default:
+              return `${alertIcon}`;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

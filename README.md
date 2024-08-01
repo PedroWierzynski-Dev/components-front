@@ -1,11 +1,11 @@
-# Design System - Wierzynski Devs
+# Design System - Employer
 
-Este é o projeto Design System Wierzynski Devs, um projeto de front-end que utiliza SCSS para estilos e BrowserSync para desenvolvimento em tempo real.
+Este é o projeto Design System Employer, um projeto de front-end que utiliza SCSS para estilos e BrowserSync para desenvolvimento em tempo real.
 
 ## Estrutura do Projeto
 
 ```plaintext
-DS.WIERZYNSKI DEVS/
+DS.EMPLOYER/
 ├── .vscode/
 │   └── settings.json
 ├── dist/
@@ -28,6 +28,7 @@ DS.WIERZYNSKI DEVS/
 │   │   ├── buttons.html
 │   │   ├── typography.html
 │   │   └── hiperlinks.html
+│   |   └── inputs.html
 │   └── scss/
 │       ├── base/
 │       │   ├── _borders.scss
@@ -40,6 +41,7 @@ DS.WIERZYNSKI DEVS/
 │       ├── components/
 │       │   ├── _buttons.scss
 │       │   └── _hiperlinks.scss
+│       |   └── _inputs_.scss
 │       ├── swatches/
 │       │   └── _swatches.scss
 │       ├── themes/
@@ -57,7 +59,7 @@ Para começar a trabalhar neste projeto, você precisará clonar o repositório 
 
 ```bash
 git clone <URL_DO_REPOSITORIO>
-cd ds.wierzynskidevs
+cd DS.EMPLOYER
 npm install
 ```
 

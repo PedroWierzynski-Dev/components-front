@@ -13,7 +13,7 @@
   @include no-underline;
 
   &:hover {
-    background-color: $swatches-base-hover !important;
+    text-decoration: underline;
   }
 
   &:active {

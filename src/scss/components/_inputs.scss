@@ -1,0 +1,320 @@
+@import "../base/borders";
+@import "../base/variables";
+@import "../base/icons";
+@import "../base/typography";
+@import "../base/fonts";
+@import "../colors/default";
+
+
+
+
+label {
+    font-size: $desktop-paragraph-medium;
+    font-weight: $semibold;
+
+    &.required {
+        &::after {
+            content: '*';
+            color: red;
+            margin-left: 2px;
+            margin-bottom: 10px;
+        }
+    }
+
+    span {
+        font-size: $desktop-paragraph-small;
+        font-weight: $regular;
+        color: $swatches-on-surface-neutral-alt;
+    }
+
+    i {
+        svg {
+            width: $icon-default;
+            height: $icon-default;
+        }
+    }
+}
+
+.input-group-prepend {
+    border: 1px $swatches-border-base solid;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    padding: $spacing-desktop-sm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group-append {
+    border: 1px $swatches-border-base solid;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    padding: $spacing-desktop-sm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    background-color: $swatches-base-subtle;
+    border: 1px solid $swatches-border-base;
+    align-items: center;
+
+    &.medium {
+        height: $spacing-desktop-xxl;
+
+        .icons {
+            i {
+                svg {
+                    width: $icon-default;
+                    height: $icon-default;
+                }
+            }
+        }
+    }
+
+    &.small {
+        height: $spacing-desktop-xl;
+
+        .icons {
+            &.input-group-prepend {
+                padding: $spacing-desktop-xs $spacing-desktop-sm ;
+            }
+
+            &.input-group-append {
+                padding: $spacing-desktop-xs $spacing-desktop-sm;
+            }
+
+            i {
+                svg {
+                    width: $icon-default;
+                    height: $icon-default;
+                }
+            }
+        }
+    }
+
+    &.large {
+        height: $spacing-desktop-hu;
+
+        .icons {
+            &.input-group-prepend {
+                padding: 14px;
+            }
+
+            &.input-group-append {
+                padding: 14px;
+            }
+
+            i {
+                svg {
+                    width: $icon-default;
+                    height: $icon-default;
+                }
+            }
+        }
+    }
+
+    .form-group {
+        position: relative;
+        display: inline-block;
+
+        input {
+            border: 1px solid $swatches-border-base;
+            border-left: none;
+            border-right: none;
+            padding: $spacing-desktop-sm;
+
+            &.number-field {
+                padding-right: 25px;
+                width: 100px;
+                text-align: end;
+
+            }
+
+            &.small {
+                height: $spacing-desktop-xl;
+            }
+
+            &.medium {
+                height: $spacing-desktop-xxl;
+            }
+
+            &.large {
+                height: $spacing-desktop-hu;
+            }
+        }
+
+        .icon {
+            position: absolute;
+            cursor: pointer;
+
+            svg {
+                width: $icon-default;
+                height: $icon-default;
+            }
+        }
+
+        .icon-remove-circle {
+            left: 5px;
+            top: 30%;
+        }
+
+        .icon-add-circle {
+            right: 5px;
+            top: 30%;
+        }
+    }
+}
+
+.form-control {
+    border: 1px solid;
+    border-color: $swatches-border-base;
+    height: $spacing-desktop-xxl;
+    padding: $spacing-desktop-md;
+
+    &:hover {
+        border-color: $swatches-base-hover;
+    }
+
+    &:active {
+        border-color: $swatches-base-active;
+    }
+
+    &:focus-visible {
+        border: 3px solid $swatches-border-base-focus;
+    }
+
+    &:focus {
+        border: 3px solid $swatches-border-base-focus;
+    }
+
+    &::selection {
+        border-color: $swatches-border-base-focus;
+    }
+
+    &:disabled {
+        border-color: $swatches-border-base-subtle;
+        opacity: 0.5;
+    }
+
+
+    &.success {
+        border-color: $swatches-border-success;
+
+        &:hover {
+            border-color: $swatches-success-hover;
+        }
+
+        &:active {
+            border-color: $swatches-success-active;
+        }
+
+        &:focus-visible {
+            border: 3px solid $swatches-border-success-focus;
+        }
+
+        &:focus {
+            border: 3px solid $swatches-border-success-focus;
+        }
+
+        &::selection {
+            border-color: $swatches-border-success-focus;
+        }
+
+        &:disabled {
+            border-color: $swatches-border-success-subtle;
+            opacity: 0.5;
+        }
+    }
+
+    &.warning {
+        border-color: $swatches-border-warning;
+
+        &:hover {
+            border-color: $swatches-warning-hover;
+        }
+
+        &:active {
+            border-color: $swatches-warning-active;
+        }
+
+        &:focus-visible {
+            border: 3px solid $swatches-border-warning-focus;
+        }
+
+        &:focus {
+            border: 3px solid $swatches-border-warning-focus;
+        }
+
+        &::selection {
+            border-color: $swatches-border-warning-focus;
+        }
+
+        &:disabled {
+            border-color: $swatches-border-warning-subtle;
+            opacity: 0.5;
+        }
+    }
+
+    &.error {
+        border-color: $swatches-border-error;
+
+        &:hover {
+            border-color: $swatches-error-hover;
+        }
+
+        &:active {
+            border-color: $swatches-error-active;
+        }
+
+        &:focus-visible {
+            border: 3px solid $swatches-border-error-focus;
+        }
+
+        &:focus {
+            border: 3px solid $swatches-border-error-focus;
+        }
+
+        &::selection {
+            border-color: $swatches-border-error-focus;
+        }
+
+        &:disabled {
+            border-color: $swatches-border-error-subtle;
+            opacity: 0.5;
+        }
+    }
+
+    &.blocked {
+        background-color: $swatches-base-subtle;
+
+        &:hover {
+            border-color: $swatches-base-hover;
+        }
+
+        &:active {
+            border: 3px solid $swatches-base-active-alt;
+        }
+
+        &:focus-visible {
+            border: 3px solid $swatches-border-base;
+        }
+
+        &:focus {
+            border: 3px solid $swatches-border-base;
+        }
+
+        &::selection {
+            border-color: $swatches-border-base-alt;
+        }
+
+        &:disabled {
+            border-color: $swatches-border-base;
+            opacity: 0.5;
+        }
+    }
+}

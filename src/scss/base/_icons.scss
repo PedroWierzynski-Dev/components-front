@@ -1,15 +1,23 @@
 @import '../base/variables';
+@import '../swatches/swatches';
 @import '../colors/default';
 
 i {
-  font-size: $icons-size;
+  svg {
+    width: $icon-default;
+    height: $icon-default;
+
+    path {
+      stroke: $secondary;
+    }
+  }
 }
 
 .icon {
   &.primary-default {
     svg {
       path {
-        stroke: $primary;
+        stroke: $swatches-brand-primary;
       }
     }
   }
@@ -189,4 +197,12 @@ i {
       }
     }
   }
+
+  i {
+    &.small svg {
+      width: $icon-small;
+      height: $icon-small;
+    }
+  }
+
 }

@@ -72,3 +72,27 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   updateColors();
 });
+
+
+
+function loadFlagSvg(flagName, container) {
+  fetch(`/flags/${flagName}.svg`)
+    .then((response) => response.text())
+    .then((data) => {
+      container.innerHTML = data;
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  let flagContainers = document.querySelectorAll('.flag');
+  flagContainers.forEach(function (container) {
+    let flagName = container.className
+      .split(' ')
+      .find((cls) => cls.startsWith('flag-'))
+      .split('flag-')[1];
+    loadFlagSvg(flagName, container);
+  });
+});
+
+

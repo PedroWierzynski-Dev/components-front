@@ -1,3 +1,6 @@
+@import '../colors/default';
+
+
 // Swatches Light
 $swatches-transparent: rgba(255, 255, 255, 0); // #ffffff 0%
 
@@ -149,6 +152,6 @@ $swatches-on-error: $neutral-0;
 $swatches-on-surface-error: $destructive-deep;
 
 // Color Error/Borders
-$swatches-border-error: $destructive-default;
+$swatches-border-error: $destructive-deep;
 $swatches-border-error-subtle: $destructive-shallower;
 $swatches-border-error-focus: $destructive-shallow;

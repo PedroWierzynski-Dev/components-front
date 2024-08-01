@@ -1,273 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/default.css" />
-    <link rel="stylesheet" href="../css/icons.css" />
-    <title>Wierzynski Devs Design System - Inputs</title>
 
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        transition: background-color 0.3s, color 0.3s;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/default.css" />
+  <link rel="stylesheet" href="../css/icons.css" />
+  <link rel="stylesheet" href="../css/flags.css" />
+  <title>Employer Design System - Inputs</title>
 
-      .toggle-container {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin: -10px 0 -90px;
-      }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
 
-      .toggle-checkbox {
-        display: none;
-      }
+    .toggle-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin: -10px 0 -90px;
+    }
 
-      .toggle-label {
-        display: flex;
-        align-items: center;
-        width: 66px;
-        height: 36px;
-        background-color: #80e8ff;
-        border-radius: 30px;
-        position: relative;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        background-image: linear-gradient(135deg, #80e8ff 50%, #b0e0e6 100%),
-          radial-gradient(circle at 10% 10%, white 3%, transparent 4%),
-          radial-gradient(circle at 35% 20%, white 3%, transparent 4%),
-          radial-gradient(circle at 25% 35%, white 3%, transparent 4%);
-        background-size: cover;
-        background-position: center;
-        border: 3px solid #262626;
-      }
+    .toggle-checkbox {
+      display: none;
+    }
 
-      .toggle-switch {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        background-color: rgba(244, 244, 244, 0.75);
-        border-radius: 50%;
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        transition: left 0.3s, background-color 0.3s;
-        border: 1.5px solid rgba(38, 38, 38, 0.5);
-        -webkit-box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
-        box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
-      }
+    .toggle-label {
+      display: flex;
+      align-items: center;
+      width: 66px;
+      height: 36px;
+      background-color: #80e8ff;
+      border-radius: 30px;
+      position: relative;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      background-image: linear-gradient(135deg, #80e8ff 50%, #b0e0e6 100%),
+        radial-gradient(circle at 10% 10%, white 3%, transparent 4%),
+        radial-gradient(circle at 35% 20%, white 3%, transparent 4%),
+        radial-gradient(circle at 25% 35%, white 3%, transparent 4%);
+      background-size: cover;
+      background-position: center;
+      border: 3px solid #262626;
+    }
 
-      .sun-icon,
-      .moon-icon {
-        position: absolute;
-        font-size: 18px;
-        transition: opacity 0.3s;
-        bottom: 0;
-      }
+    .toggle-switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background-color: rgba(244, 244, 244, 0.75);
+      border-radius: 50%;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      transition: left 0.3s, background-color 0.3s;
+      border: 1.5px solid rgba(38, 38, 38, 0.5);
+      -webkit-box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.5);
+    }
 
-      .sun-icon {
-        opacity: 1;
-      }
+    .sun-icon,
+    .moon-icon {
+      position: absolute;
+      font-size: 18px;
+      transition: opacity 0.3s;
+      bottom: 0;
+    }
 
-      .moon-icon {
-        opacity: 0;
-      }
+    .sun-icon {
+      opacity: 1;
+    }
 
-      .toggle-checkbox:checked + .toggle-label {
-        background-color: #171717;
-        background-image: linear-gradient(225deg, #171717 50%, #434343 100%),
-          radial-gradient(circle at 30% 30%, #ffffff 1%, transparent 1.5%),
-          radial-gradient(circle at 70% 40%, #ffffff 1%, transparent 1.5%),
-          radial-gradient(circle at 50% 70%, #ffffff 1%, transparent 1.5%);
-        background-size: cover;
-        background-position: center;
-      }
+    .moon-icon {
+      opacity: 0;
+    }
 
-      .toggle-checkbox:checked + .toggle-label .toggle-switch {
-        left: 33px;
-      }
+    .toggle-checkbox:checked+.toggle-label {
+      background-color: #171717;
+      background-image: linear-gradient(225deg, #171717 50%, #434343 100%),
+        radial-gradient(circle at 30% 30%, #ffffff 1%, transparent 1.5%),
+        radial-gradient(circle at 70% 40%, #ffffff 1%, transparent 1.5%),
+        radial-gradient(circle at 50% 70%, #ffffff 1%, transparent 1.5%);
+      background-size: cover;
+      background-position: center;
+    }
 
-      .toggle-checkbox:checked + .toggle-label .toggle-switch .sun-icon {
-        opacity: 0;
-      }
+    .toggle-checkbox:checked+.toggle-label .toggle-switch {
+      left: 33px;
+    }
 
-      .toggle-checkbox:checked + .toggle-label .toggle-switch .moon-icon {
-        opacity: 1;
-      }
-    </style>
-  </head>
+    .toggle-checkbox:checked+.toggle-label .toggle-switch .sun-icon {
+      opacity: 0;
+    }
 
-  <body style="background-color: #fff">
-    <header class="pages_header--dark">
-      <div class="toggle-container">
-        <input type="checkbox" id="toggle" class="toggle-checkbox" />
-        <label for="toggle" class="toggle-label">
-          <span class="toggle-switch">
-            <span class="sun-icon">🌞</span>
-            <span class="moon-icon">🌜</span>
-          </span>
-        </label>
-      </div>
+    .toggle-checkbox:checked+.toggle-label .toggle-switch .moon-icon {
+      opacity: 1;
+    }
+  </style>
+</head>
 
-      <div class="pages_header--dark">
-        <ul
-          style="
+<body style="background-color: #fff">
+  <header class="pages_header--dark">
+    <div class="toggle-container">
+      <input type="checkbox" id="toggle" class="toggle-checkbox" />
+      <label for="toggle" class="toggle-label">
+        <span class="toggle-switch">
+          <span class="sun-icon">🌞</span>
+          <span class="moon-icon">🌜</span>
+        </span>
+      </label>
+    </div>
+
+    <div class="pages_header--dark">
+      <ul style="
             display: flex;
             gap: 25px;
             list-style-type: none;
             color: #ffffff;
-          "
-        >
-          <li>
-            <a style="color: #ffffff; text-decoration: none" href="/">Home</a>
-          </li>
-          <li>
-            <a
-              style="color: #ffffff; text-decoration: none"
-              href="../pages/typography.html"
-              >Tipografia</a
-            >
-          </li>
-          <li>
-            <a
-              style="color: #ffffff; text-decoration: none"
-              href="../pages/buttons.html"
-              >Botões</a
-            >
-          </li>
-          <li>
-            <a
-              style="color: #ffffff; text-decoration: none"
-              href="../pages/hiperlinks.html"
-              >Hiperlinks</a
-            >
-          </li>
-          <li>
-            <a
-              style="color: #ffffff; text-decoration: none"
-              href="../pages/inputs.html"
-              >Inputs</a
-            >
-          </li>
-          <li>
-            <a
-              style="color: #ffffff; text-decoration: none"
-              href="../pages/alerts.html"
-              >Alerts</a
-            >
-          </li>
-        </ul>
+          ">
+        <li>
+          <a style="color: #ffffff; text-decoration: none" href="/">Home</a>
+        </li>
+        <li>
+          <a style="color: #ffffff; text-decoration: none" href="../pages/typography.html">Tipografia</a>
+        </li>
+        <li>
+          <a style="color: #ffffff; text-decoration: none" href="../pages/buttons.html">Botões</a>
+        </li>
+        <li>
+          <a style="color: #ffffff; text-decoration: none" href="../pages/hiperlinks.html">Hiperlinks</a>
+        </li>
+        <li>
+          <a style="color: #ffffff; text-decoration: none" href="../pages/inputs.html">Inputs</a>
+        </li>
+        <li>
+          <a style="color: #ffffff; text-decoration: none" href="../pages/alerts.html">Alerts</a>
+        </li>
+      </ul>
 
-        <br />
-        <br />
-        <br />
+      <br />
+      <br />
+      <br />
 
-        <div class="paragraph-large medium">
-          Wierzynski Devs Design System / CORE-Basics
+      <div class="paragraph-large medium">
+        Employer Design System / CORE-Basics
+      </div>
+      <div class="display-small medium">Input</div>
+      <br />
+      <div class="paragraph-medium regular">
+        Os <q> Inputs </q> são para utilização em formulários e campos em
+        geral. Estão disponíveis nos tamanhos Small, Medium e Large, com
+        diversas opções que incluem Campo Obrigatório ou Opcional, Pré-tab,
+        Pós-tab, Placeholder, Input, Valor Numérico, Ícones à direita e à
+        esquerda, Mensagem de Instrução e Texto de Feedback. Eles abrangem os
+        temas Base, Sucesso, Atenção, Erro e Bloqueado, e podem estar nos
+        estados Default, Hover, Active, Selected, Focus e Disabled. Essa ampla
+        gama de opções e estados garante flexibilidade e precisão no design,
+        permitindo uma experiência de usuário eficiente e personalizada.
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="pages_components--bg-neutral" style="display: flex;flex-wrap: wrap; gap: 25px;">
+      <div id="label" style="
+            border: 1px dashed #9747ff;
+            padding: 25px;
+            max-width: 356px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;">
+        <div>
+          <label for="" style="display: flex; align-items: center;
+          gap: 5px;">
+            Label <i class="icon primary-default icon-help-circle "></i>
+          </label>
         </div>
-        <div class="display-small medium">Input</div>
         <br />
-        <div class="paragraph-medium regular">
-          Os <q> Inputs </q> são para utilização em formulários e campos em
-          geral. Estão disponíveis nos tamanhos Small, Medium e Large, com
-          diversas opções que incluem Campo Obrigatório ou Opcional, Pré-tab,
-          Pós-tab, Placeholder, Input, Valor Numérico, Ícones à direita e à
-          esquerda, Mensagem de Instrução e Texto de Feedback. Eles abrangem os
-          temas Base, Sucesso, Atenção, Erro e Bloqueado, e podem estar nos
-          estados Default, Hover, Active, Selected, Focus e Disabled. Essa ampla
-          gama de opções e estados garante flexibilidade e precisão no design,
-          permitindo uma experiência de usuário eficiente e personalizada.
+        <div>
+          <label for="" class="required" style="display: flex; align-items: center;
+          gap: 5px;">
+            Label <i class="icon primary-default icon-help-circle "></i>
+          </label>
+        </div>
+        <br />
+        <div>
+          <label for="" style="display: flex; align-items: center;
+          gap: 5px;">
+            Label
+            <i class="icon primary-default icon-help-circle "></i>
+            <span class="paragraph-small regular">(opcional)</span>
+          </label>
         </div>
       </div>
-    </header>
 
-    <main class="pages_components--bg-neutral">
-      <div
-        style="
+      <div id="preTab" style="
           border: 1px dashed #9747ff;
-          padding: 30px;
+          padding: 25px;
           max-width: 356px;
-          border-radius: 8px;
-        "
-      >
-        <div style="display: flex; gap: 15px">
-          <button class="btn icon-small">
-            <i class="icon icon-add-square"></i>
-          </button>
-          <button class="btn small">
-            <i class="icon icon-add-square"></i>BUTTON<i
-              class="icon icon-add-square"
-            ></i>
-          </button>
+          border-radius: 8px;">
+        <div class="input-group-prepend">
+          <i class="icon primary-default icon-user"></i>
         </div>
-        <br />
-        <div style="display: flex; gap: 15px">
-          <button class="btn icon-medium">
-            <i class="icon icon-add-square"></i>
-          </button>
-          <button class="btn medium">
-            <i class="icon icon-add-square"></i>BUTTON<i
-              class="icon icon-add-square"
-            ></i>
-          </button>
+        <br>
+        <div class="input-group-prepend">
+          <p class="paragraph-small regular">https://</p>
         </div>
-        <br />
-        <div style="display: flex; gap: 15px">
-          <button class="btn icon-large">
-            <i class="icon icon-add-square"></i>
-          </button>
-          <button class="btn large">
-            <i class="icon icon-add-square"></i>BUTTON<i
-              class="icon icon-add-square"
-            ></i>
-          </button>
-        </div>
-        <br />
-        <div style="display: flex; gap: 15px">
-          <button class="btn icon-xlarge">
-            <i class="icon icon-add-square"></i>
-          </button>
-          <button class="btn xlarge">
-            <i class="icon icon-add-square"></i>BUTTON<i
-              class="icon icon-add-square"
-            ></i>
-          </button>
+        <br>
+        <div class="input-group-prepend">
+          <i class="flag flag-br"></i>
         </div>
       </div>
-    </main>
+      <div id="posTab" style="
+          border: 1px dashed #9747ff;
+          padding: 25px;
+          max-width: 356px;
+          border-radius: 8px;">
+        <div class="input-group-append">
+          <i class="icon primary-default icon-search"></i>
+        </div>
+        <br>
+        <div class="input-group-append">
+          <p class="paragraph-small regular">%</p>
+        </div>
+        <br>
+        <div class="input-group-append">
+          <i class="flag flag-br"></i>
+        </div>
+      </div>
 
-    <div class="pages_components--pure-white"></div>
+      <div id="inputs" style="
+      border: 1px dashed #9747ff;
+      padding: 25px;
+      border-radius: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;">
 
-    <footer class="pages_footer--dark">
-      <div
-        style="
+        <!-- Input Medium -->
+        <div id="inputMedium">
+          <label for="" style="display: flex; align-items: center;
+          gap: 5px;">
+            Input Number <i class="icon primary-default icon-help-circle "></i>
+          </label>
+          <br />
+          <p class="paragraph-small regular">Medium</p>
+          <br />
+          <div class="input-group medium">
+            <div class="icons input-group-prepend">
+              <i class="icon primary-default icon-user"></i>
+            </div>
+            <div class="form-group">
+              <input type="text" id="inputNumber" class="number-field medium" value="0">
+              <i class="icon primary-default icon-remove-circle" id="decrease"></i>
+              <i class="icon primary-default icon-add-circle" id="increase"></i>
+            </div>
+            <div class="icons input-group-append">
+              <i class="icon primary-default icon-search"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Input Smalll -->
+        <div id="inputSmall">
+          <label for="" style="display: flex; align-items: center;
+          gap: 5px;">
+            Input Text <i class="icon primary-default icon-help-circle "></i>
+          </label>
+          <br />
+          <p class="paragraph-small regular">Small</p>
+          <br />
+          <div class="input-group small">
+            <div class="icons input-group-prepend">
+              <i class="icon primary-default icon-user"></i>
+            </div>
+            <div class="form-group">
+              <input type="text" class="small" placeholder="Placeholder">
+            </div>
+            <div class="icons input-group-append">
+              <i class="icon primary-default icon-search"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Input Large -->
+        <div id="inputLarge">
+          <label for="" style="display: flex; align-items: center;
+          gap: 5px;">
+            Input Text <i class="icon primary-default icon-help-circle "></i>
+          </label>
+          <br />
+          <p class="paragraph-small regular">Large</p>
+          <br />
+          <div class="input-group large">
+            <div class="icons input-group-prepend">
+              <i class="icon primary-default icon-user"></i>
+            </div>
+            <div class="form-group">
+              <input type="text" class="large" placeholder="Placeholder">
+            </div>
+            <div class="icons input-group-append">
+              <i class="icon primary-default icon-search"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pages_components--pure-white">
+      <div id="inputs" style="
+        border: 1px dashed #9747ff;
+        padding: 25px;
+        border-radius: 8px;">
+        <div style=" display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;">
+          <!-- Default -->
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label>Label</label>
+            <input type="text" class="form-control " placeholder="Placeholder">
+          </div>
+
+          <!-- Success -->
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label>Label</label>
+            <input type="text" class="form-control success" placeholder="Placeholder">
+          </div>
+
+          <!-- Warning -->
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label>Label</label>
+            <input type="text" class="form-control warning" placeholder="Placeholder">
+          </div>
+
+          <!-- Error -->
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label>Label</label>
+            <input type="text" class="form-control error" placeholder="Placeholder">
+          </div>
+
+          <!-- Blocked -->
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label>Label</label>
+            <input type="text" disabled class="form-control blocked" placeholder="Placeholder">
+          </div>
+        </div>
+        <br /> <br />
+        <div style=" display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;">
+          <!-- Default -->
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label>Label</label>
+            <input type="text" disabled class="form-control  " placeholder="Placeholder">
+          </div>
+
+          <!-- Success -->
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label>Label</label>
+            <input type="text" disabled class="form-control  success" placeholder="Placeholder">
+          </div>
+
+          <!-- Warning -->
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label>Label</label>
+            <input type="text" disabled class="form-control  warning" placeholder="Placeholder">
+          </div>
+
+          <!-- Error -->
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label>Label</label>
+            <input type="text" disabled class="form-control  error" placeholder="Placeholder">
+          </div>
+
+          <!-- Blocked -->
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label>Label</label>
+            <input type="text" disabled class="form-control  blocked" placeholder="Placeholder">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer class="pages_footer--dark">
+    <div style="
           display: flex;
           justify-content: space-between;
           align-items: center;
-        "
-      >
-        <div class="paragraph-large medium">© 2024 -  Wierzynski Devs</div>
-        <!-- <img
-          src="https://app.epays.com.br/assets/images/Wierzynski Devs-logo-%402x.png"
-          alt="Logo da Wierzynski Devs"
-          width="100"
-        /> -->
-      </div>
-    </footer>
+        ">
+      <div class="paragraph-large medium">© 2024 - Grupo Employer</div>
+      <img src="https://app.epays.com.br/assets/images/employer-logo-%402x.png" alt="Logo da Employer" width="100" />
+    </div>
+  </footer>
 
-    <script>
-      const toggleCheckbox = document.getElementById('toggle');
+  <script src="../js/toggle.js"></script>
+  <script src="../js/input.js"></script>
+  <script>
+    const toggleCheckbox = document.getElementById('toggle');
 
-      toggleCheckbox.addEventListener('change', () => {
-        let dark = document.body.classList.toggle('dark-theme');
-        let defaut = document.body.classList.toggle('');
-        console.log(dark);
-        console.log(defaut);
+    toggleCheckbox.addEventListener('change', () => {
+      let dark = document.body.classList.toggle('dark-theme');
+      let defaut = document.body.classList.toggle('');
+      console.log(dark);
+      console.log(defaut);
+    });
+  </script>
+  <script>
+    document.querySelectorAll('a.disabled').forEach((link) => {
+      console.log(link);
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>

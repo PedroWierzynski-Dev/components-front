@@ -1,0 +1,21 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="3.43005" width="24" height="17.1429" rx="2" fill="white"/>
+<mask id="mask0_14_333" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="3" width="24" height="18">
+<rect y="3.43005" width="24" height="17.1429" rx="2" fill="white"/>
+</mask>
+<g mask="url(#mask0_14_333)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.85863H24V3.43005H0V6.85863Z" fill="#486BCA"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 20.5729H24V17.1443H0V20.5729Z" fill="#486BCA"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 17.1444H24V6.85864H0V17.1444Z" fill="#FFDF20"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.0015H24V8.00146H0V16.0015Z" fill="#CF1615"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 14.8587C14.8404 14.8587 17.1429 12.0016 17.1429 12.0016C17.1429 12.0016 14.8404 9.14441 12 9.14441C9.15971 9.14441 6.85718 12.0016 6.85718 12.0016C6.85718 12.0016 9.15971 14.8587 12 14.8587Z" fill="white"/>
+<mask id="mask1_14_333" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="9" width="12" height="6">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 14.8587C14.8404 14.8587 17.1429 12.0016 17.1429 12.0016C17.1429 12.0016 14.8404 9.14441 12 9.14441C9.15971 9.14441 6.85718 12.0016 6.85718 12.0016C6.85718 12.0016 9.15971 14.8587 12 14.8587Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_14_333)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5714 9.14441H6.85713V14.8587H11.4286L12.5714 9.14441Z" fill="#262626"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.1428 12.573C13.4584 12.573 13.7143 12.3172 13.7143 12.0016C13.7143 11.686 13.4584 11.4302 13.1428 11.4302C12.8272 11.4302 12.5714 11.686 12.5714 12.0016C12.5714 12.3172 12.8272 12.573 13.1428 12.573Z" fill="#1A1A1A"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.8572 12.573C11.1728 12.573 11.4286 12.3172 11.4286 12.0016C11.4286 11.686 11.1728 11.4302 10.8572 11.4302C10.5416 11.4302 10.2858 11.686 10.2858 12.0016C10.2858 12.3172 10.5416 12.573 10.8572 12.573Z" fill="#F6F6F6"/>
+</g>
+</g>
+</svg>

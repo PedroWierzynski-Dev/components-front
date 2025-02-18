@@ -59,7 +59,7 @@ Para começar a trabalhar neste projeto, você precisará clonar o repositório 
 
 ```bash
 git clone <URL_DO_REPOSITORIO>
-cd DS.EMPLOYER
+cd components-front
 npm install
 ```
 
